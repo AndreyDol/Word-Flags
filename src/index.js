@@ -68,15 +68,22 @@ onSearch();
 refs.buttonClue.addEventListener('click', onClue);
 refs.button.addEventListener('click', onSearch);
 function onClue(event) {
-  const clue = Math.floor(Math.random() * 2)+1;
+  const clue = Math.floor(Math.random() * 3)+1;
 
- // console.log(foundData[randomCountry]);
+  console.log(foundData[randomCountry]);
   if (randomCountry !== -1 && clue === 1) {
     Notiflix.Notify.info(`capital: ${foundData[randomCountry].capital}`);
   }
 if (randomCountry!==-1 && clue === 2) {
     Notiflix.Notify.info(`continent: ${foundData[randomCountry].continents}`); 
-}
+  }
+  if (randomCountry !== -1 && clue === 3) {
+    Notiflix.Notify.info(
+      `langlanguages: ${Object.values(foundData[randomCountry].languages).join(
+        ', '
+      )}`
+    );
+  }
  };
 
 function onSearch(event) {
