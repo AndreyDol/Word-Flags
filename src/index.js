@@ -31,7 +31,7 @@ const fetchUsers = async () => {
 const doStuff = async () => {
   try {
     foundData = await fetchUsers();
-    console.log(users);
+   // console.log(users);
   } catch (error) {
     console.log(error.message);
   }
@@ -55,7 +55,7 @@ function generateCheckCountry(data, oneCounry, mount) {
   for (let i = 0; i < mount; i++) {
     if (i === randomI) randomCountryNumber = oneCounry;
     else randomCountryNumber = random(foundData);
-    arrayCheckCountry.push(data[randomCountryNumber].name.official);
+    arrayCheckCountry.push(data[randomCountryNumber].name.common);
   }
 
   return arrayCheckCountry;
@@ -70,7 +70,7 @@ refs.button.addEventListener('click', onSearch);
 function onClue(event) {
   const clue = Math.floor(Math.random() * 3)+1;
 
-  console.log(foundData[randomCountry]);
+  //console.log(foundData[randomCountry]);
   if (randomCountry !== -1 && clue === 1) {
     Notiflix.Notify.info(`capital: ${foundData[randomCountry].capital}`);
   }
@@ -106,8 +106,8 @@ function onSearch(event) {
   }
 
   if (check.length > 0) {
-    console.log(inputCheck(check));
-    console.log(flagName);
+    //console.log(inputCheck(check));
+   // console.log(flagName);
     if (inputCheck(check) === flagName) {
       score += 1;
       Notiflix.Notify.success(`Сorrectly !  + 1`);
@@ -125,13 +125,13 @@ setTimeout(() => {
   // перевірка, якщо значення не пустий рядок
 
   if (foundData !== {}) {
-    console.log(foundData);
+   // console.log(foundData);
     randomCountry = random(foundData);
 
     // console.log(generateCheckCountry(foundData, randomCountry, 5));
     // console.log(randomCountry);
     // console.log(foundData[randomCountry]);
-    flagName = foundData[randomCountry].name.official;
+    flagName = foundData[randomCountry].name.common;
 
     insertContent(
       foundData[randomCountry],
