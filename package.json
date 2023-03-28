@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://AndreyDol.github.io/goit-js-hw-10",
+  "homepage": "https://AndreyDol.github.io/Word-Flags",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
+    "build": "parcel build src/*.html --public-url /Word-Flags/"
   },
   "repository": {
     "type": "git",
