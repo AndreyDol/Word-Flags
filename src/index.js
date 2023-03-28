@@ -6,7 +6,7 @@ import './css/styles.css';
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({
-  width: '800px',
+  width: '500px',
   position: 'center-center',
   distance: '10px',
   opacity: 1,
