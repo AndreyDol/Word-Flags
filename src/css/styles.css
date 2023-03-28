@@ -10,6 +10,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  background-color:aliceblue;
 }
 
 #search-box {
@@ -34,4 +35,9 @@ body {
 
 .name{
   font-size: 24px;
+}
+
+.button{
+  padding: 20px 30px;
+  margin-left: 100px;
 }
